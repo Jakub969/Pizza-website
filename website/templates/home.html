@@ -1,0 +1,105 @@
+{% extends "base.html" %} {% block title %}Ponuka{% endblock %} {% block content
+%}
+<h1>Ponuka</h1>
+<div>
+  Našu pizzu si môžete vychutnať aj v stravovacích zariadeniach <a href="http://www.freefood.sk" title="Free Food">Free Food</a>.<br>
+  Objednať si môžete cez náš objednávkový formulár alebo prostredníctvom <a href="http://www.bistro.sk" title="Bistro.sk">Bistro.sk</a>.<br>
+</div>
+<ul>
+  <li>
+<article>
+  <h3>Margherita (3.00 &euro;)</h3>
+  <img src="https://static.toiimg.com/photo/56868564.cms" alt="pizza margherita" width="400" height="400">
+  <h6>paradajková omáčka, syr <sub>1, 7</sub></h6> 
+  <br>
+  <form method="post">
+    <select name="pizza" id="pizza">
+      <option value="1">Pizza Margherita 3€ - 330g</option>
+      <option value="2">Pizza Margherita 5€ - 540g</option>
+    </select>
+    <button type="submit" name="Margherita" class="btn btn-primary">Pridaj pizzu</button>
+  </form>
+</article>
+<hr>
+</li>
+<li>
+<article>
+  <h3>Cardinale (4.00 &euro;)</h3>
+  <img src="https://www.pizzeria-lamami.sk/data/uploads/imanager/1850512996.1/11_Cardinale.jpg" alt="pizza cardinale" width="400" height="400">
+  <h6>paradajková omáčka, syr, šunka <sub>1, 7</sub> </h6> 
+  <br>
+  <form method="post">
+    <select name="pizza" id="pizza">
+      <option value="3">Pizza Cardinale 4€ - 330g</option>
+      <option value="4">Pizza Cardinale 6€ - 540g</option>
+    </select>
+    <button type="submit" name="Cardinale" class="btn btn-primary">Pridaj pizzu</button>
+  </form>
+</article>
+</li>
+<hr>
+<li>
+  <article>
+    <h3>Funghi (5.00 &euro;)</h3>
+    <img src="https://www.maydaypizza.sk/image/cache/catalog/NOVE%20PIZZE%20ALEX/Pizza_nove_small/Pizza_ProsciuttoFunghi_small-560x373.jpg" alt="pizza funghi" width="400" height="400">
+    <h6>paradajková omáčka, syr, šampiňony <sub>1, 7</sub> </h6> 
+    <br> 
+    <form method="post">
+      <select name="pizza" id="pizza">
+        <option value="5">Pizza Funghi 5€ - 330g</option>
+        <option value="6">Pizza Funghi 7€ - 540g</option>
+      </select>
+      <button type="submit" name="Funghi" class="btn btn-primary">Pridaj pizzu</button>
+    </form>
+  </article>
+  </li>
+  <hr>
+  <li>
+    <article>
+      <h3>Hawai (4.00 &euro;)</h3>
+      <img src="https://www.kaloricketabulky.sk/file/image/foodstuff/a5e8ba1218deccba/cb8fb3dbe3c147558aa83c85fe572468" alt="pizza hawai" width="400" height="400">
+      <h6>paradajková omáčka, syr, šunka, ananás  <sub>1, 7</sub></h6> 
+      <br>
+      <form method="post">
+        <select name="pizza" id="pizza">
+          <option value="7">Pizza Hawai 4€ - 330g</option>
+          <option value="8">Pizza Hawai 6€ - 540g</option>
+        </select>
+        <button type="submit" name="Hawai" class="btn btn-primary">Pridaj pizzu</button>
+      </form>
+    </article>
+    </li>
+    <hr>
+    <li>
+      <article>
+        <h3>Prosciutto (6.00 &euro;)</h3>
+        <img src="https://www.maydaypizza.sk/image/cache/catalog/NOVE%20PIZZE%20ALEX/Pizza_nove_small/Pizza_Prosciutto_Small-560x373.jpg" alt="pizza prosciutto" width="400" height="400">
+        <h6>paradajková omáčka, mozarella, šunka <sub>1, 7</sub> </h6> 
+        <br> 
+        <form method="post">
+          <select name="pizza" id="pizza">
+            <option value="9">Pizza Prosciutto 6€ - 330g</option>
+            <option value="10">Pizza Prosciutto 8€ - 540g</option>
+          </select>
+          <button type="submit" name="Prosciutto" class="btn btn-primary">Pridaj pizzu</button>
+        </form>
+      </article>
+      </li>
+      <hr>
+      <li>
+        <article>
+          <h3>Quattro Formaggi (5.00 &euro;)</h3>
+          <img src="https://ms3.ostium.cz/instance/web-recepty/jBqcuKcb/h389w574t.jpg" alt="pizza quattro" width="400" height="400">
+          <h6>paradajková omáčka, 4 druhy syra <sub>1, 7</sub> </h6> 
+          <br>
+          <form method="post">
+            <select name="pizza" id="pizza">
+              <option value="11">Pizza Quattro Formaggi 5€ - 330g</option>
+              <option value="12">Pizza Quattro Formaggi 7€ - 540g</option>
+            </select>
+            <button type="submit" name="Quattro" class="btn btn-primary">Pridaj pizzu</button>
+          </form>
+        </article>
+        </li>
+</ul>
+{% endblock %}

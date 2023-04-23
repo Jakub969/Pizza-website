@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block title %}Košík{% endblock %}
+
+{% block content %}
+<br>
+<ul class="list-group list-group-flush" id="pizze">
+  {% for pizza in user.pizze %}
+  <li class="list-group-item">
+    {% if "1" in pizza.nazov %}
+    <h4>Pizza Margherita 3€ - 330g</h4>
+    {% elif "2" in pizza.nazov %}
+    <h4>Pizza Margherita 5€ - 540g</h4>
+    {% elif "3" in pizza.nazov %}
+    <h4>Pizza Cardinale 4€ - 330g</h4>
+    {% elif "4" in pizza.nazov %}
+    <h4>Pizza Cardinale 6€ - 540g</h4>
+    {% elif "5" in pizza.nazov %}
+    <h4>Pizza Funghi 5€ - 330g</h4>
+    {% elif "6" in pizza.nazov %}
+    <h4>Pizza Funghi 7€ - 540g</h4>
+    {% elif "7" in pizza.nazov %}
+    <h4>Pizza Hawai 4€ - 330g</h4>
+    {% elif "8" in pizza.nazov %}
+    <h4>Pizza Hawai 6€ - 540g</h4>
+    {% elif "9" in pizza.nazov %}
+    <h4>Pizza Prosciutto 6€ - 330g</h4>
+    {% elif "10" in pizza.nazov %}
+    <h4>Pizza Prosciutto 8€ - 540g</h4>
+    {% elif "11" in pizza.nazov %}
+    <h4>Pizza Quattro Formaggi 5€ - 330g</h4>
+    {% elif "12" in pizza.nazov %}
+    <h4>Pizza Quattro Formaggi 7€ - 540g</h4>
+    {% endif %}
+    <button type="button" class="close" onclick="vymazPizzu({{pizza.id}})">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </li>
+  {%endfor%}
+</ul>
+<ul class="list-group list-group-flush" id="rezervacie">
+  {% for rezervacia in user.rezervacie %}
+  <li class="list-group-item">
+    {% if rezervacia %}
+    <button type="button" class="close" onclick="vymazRezervaciu({{rezervacia.id}})">
+      <span aria-hidden="true">&times;</span>
+  </button>
+      <h3>Rezervácia - 5€:</h3>
+      <h4>Meno: {{ rezervacia.meno }}</h4>
+      <h4>Priezvisko: {{rezervacia.priezvisko}}</h4>
+      <h4>Telefónne číslo: {{rezervacia.tel}}</h4>
+      <h4>Počet osôb: {{ rezervacia.pocet }}</h4>
+      <h4>Mesto: {%if "bb" in rezervacia.mesto%}Banská Bystrica{%else%}Bratislava{%endif%}</h4>
+      <h4>Dátum: {{rezervacia.den}}. {{ rezervacia.mesiac }}. {{rezervacia.rok}}</h4>
+      <h4>Čas: {{rezervacia.hod}}:{{rezervacia.min}}</h4>
+    {% endif %}
+  </li>  
+  {%endfor%}
+</ul>
+<br>
+{%if user.pizze|length or user.rezervacie|length%}
+<button type="button" class="btn btn-primary" onclick="zaplatit()">Zaplatiť</button>
+{%endif%}
+{% endblock %}

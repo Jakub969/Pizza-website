@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block title %}Rezervácia{% endblock %}
+
+{% block content %}
+<section id="rezervacia">
+    <h2>Rezervácia</h2>
+	<br>
+	<h5>Môžete si aj rezervovať stôl v jednej z našich prevádzok.</h5>
+	<br>
+		<form method="post">
+			<label for="meno">Meno:</label> <input type="text" name="meno" id="meno" value=""><br>
+			<label for="priezvisko">Priezvisko:</label> <input type="text" name="priezvisko" id="priezvisko" value=""><br>
+			<label for="tel">Telefón:</label> <input type="text" name="tel" id="tel" value=""><br>
+			<label for="pocet">Počet osôb:</label> <select name='pocet'>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+				<option value='6'>6</option>
+				<option value='7'>7</option>
+				<option value='8'>8</option>
+				<option value='9'>9</option>
+				<option value='10'>10</option>
+			</select><br>
+			Mesto: <input type="radio" name="mesto" value="ba" id="ba"> <label for="ba">Bratislava</label> |
+			<input type="radio" name="mesto" value="bb" id="bb" checked> <label for="bb">Banská Bystrica</label><br>
+			Dátum: <select name='den'>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+				<option value='6'>6</option>
+				<option value='7'>7</option>
+				<option value='8'>8</option>
+				<option value='9'>9</option>
+				<option value='10'>10</option>
+			</select> 
+			<select name='mesiac'>
+				<option value='2'>február</option>
+				<option value='3'>marec</option>
+				<option value='4'>apríl</option>
+				<option value='5'>máj</option>
+				<option value='6'>jún</option>
+				<option value='7'>júl</option>
+				<option value='8'>august</option>
+				<option value='9'>september</option>
+				<option value='10'>október</option>
+				<option value='11'>november</option>
+				<option value='12'>december</option>
+				<option value='1'>január</option>
+			</select> 
+			<select name='rok'>
+				<option value='2023'>2023</option>
+				<option value='2024'>2024</option>
+			</select><br>
+			Čas: <select name='hod'>
+				<option value='10'>10</option>
+				<option value='11'>11</option>
+				<option value='12'>12</option>
+				<option value='13'>13</option>
+				<option value='14'>14</option>
+				<option value='15'>15</option>
+				<option value='16'>16</option>
+				<option value='17'>17</option>
+				<option value='18'>18</option>
+				<option value='19'>19</option>
+			</select> 
+			<select name='min'>
+				<option value='00'>00</option>
+				<option value='15'>15</option>
+				<option value='30'>30</option>
+				<option value='45'>45</option>
+			</select><br>
+			<br>
+			<button type="submit" class="btn btn-primary">Odošli údaje</button>
+		</form>
+	</section>	
+{% endblock %}
